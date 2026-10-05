@@ -141,8 +141,8 @@
       "recommended": ["build-web-apps", "figma", "notion", "github"]
     },
     {
-      "id": "nstack-bundled",
-      "repository": "./components/plugins",
+      "id": "nstack-directory",
+      "repository": "https://github.com/NeerajCodz/nstack-directory/tree/main/plugins",
       "install": "nstack install plugin/<name>",
       "recommended": ["frontend", "unit-testing", "security-scanning", "full-stack-orchestration", "comprehensive-review"]
     }
@@ -157,22 +157,22 @@
     {
       "id": "context7",
       "repository": "https://github.com/upstash/context7",
-      "manifest": "components/mcps/context7.json"
+      "manifest": "mcps/context7.json"
     },
     {
       "id": "playwright",
       "repository": "https://github.com/microsoft/playwright-mcp",
-      "manifest": "components/mcps/playwright.json"
+      "manifest": "mcps/playwright.json"
     },
     {
       "id": "chrome-devtools",
       "repository": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
-      "manifest": "components/mcps/chrome-devtools.json"
+      "manifest": "mcps/chrome-devtools.json"
     },
     {
       "id": "github",
       "repository": "https://github.com/github/github-mcp-server",
-      "manifest": "components/mcps/github.json"
+      "manifest": "mcps/github.json"
     }
   ]
 }

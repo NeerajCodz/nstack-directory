@@ -173,28 +173,17 @@ Each adapter transforms source plugins to harness-native artifacts:
 2. **`make garden`** — Drift detection (dead links, stale artifacts, oversize skills)
 3. **`make test`** — Full pytest suite (386 tests)
 
-## Key Files to Copy
+## Canonical Directory Contents
 
-### Already Copied
-- `plugins/` → `components/plugins/` (86 plugins)
-- `tools/adapters/` → `components/tools/adapters/`
-- `tools/generate.py` → `components/tools/`
-- `tools/install_*.py` → `components/tools/`
-- `tools/validate_generated.py` → `components/tools/`
-- `docs/` → `components/docs/`
-- `AGENTS.md`, `GEMINI.md`, `ARCHITECTURE.md` → `components/templates/`
-- `gemini-extension.json` → `components/templates/`
+The repository payload has been migrated from nstack's former `components/` tree to this repository root, preserving category-relative paths:
 
-### Need to Copy
-- `.claude-plugin/marketplace.json` → `components/templates/`
-- `.agents/plugins/marketplace.json` → `components/templates/`
-- `.cursor/rules/*.mdc` → `components/templates/cursor/`
-- `.cursor-plugin/marketplace.json` → `components/templates/`
-- `.gemini/settings.json` → `components/templates/`
-- `.github/` → `components/templates/github/`
-- `tools/tests/` → `components/tools/tests/`
-- `tools/doc_gardener.py` → `components/tools/`
-- `tools/check_agent_name_collisions.py` → `components/tools/`
+- `plugins/` — 86 complete plugin directories
+- `skills/` — 23 standalone skill directories
+- `agents/` — 23 standalone agent markdown files and directory grouping
+- `mcps/` — 4 standalone server manifests
+- `templates/`, `catalog/`, `docs/`, and `tools/` — shared project assets, catalog data, guidance, generators, adapters, and tests
+
+Use those root-relative paths in links, manifests, and component URLs. `nstack` consumes the canonical repository checkout rather than a bundled copy.
 
 ## Statistics
 
